@@ -13,6 +13,7 @@
 		D83A3B341E1D195C001C3DE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D83A3B331E1D195C001C3DE4 /* Assets.xcassets */; };
 		D83A3B371E1D195C001C3DE4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D83A3B351E1D195C001C3DE4 /* LaunchScreen.storyboard */; };
 		D83A3B421E1D195C001C3DE4 /* TestAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83A3B411E1D195C001C3DE4 /* TestAppTests.swift */; };
+		D83A3B4D1E1D1A21001C3DE4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D83A3B4C1E1D1A21001C3DE4 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		D83A3B3D1E1D195C001C3DE4 /* TestAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D83A3B411E1D195C001C3DE4 /* TestAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppTests.swift; sourceTree = "<group>"; };
 		D83A3B431E1D195C001C3DE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D83A3B4C1E1D1A21001C3DE4 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				D83A3B2C1E1D195C001C3DE4 /* AppDelegate.swift */,
 				D83A3B2E1E1D195C001C3DE4 /* ViewController.swift */,
+				D83A3B4C1E1D1A21001C3DE4 /* NetworkManager.swift */,
 				D83A3B301E1D195C001C3DE4 /* Main.storyboard */,
 				D83A3B331E1D195C001C3DE4 /* Assets.xcassets */,
 				D83A3B351E1D195C001C3DE4 /* LaunchScreen.storyboard */,
@@ -201,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D83A3B4D1E1D1A21001C3DE4 /* NetworkManager.swift in Sources */,
 				D83A3B2F1E1D195C001C3DE4 /* ViewController.swift in Sources */,
 				D83A3B2D1E1D195C001C3DE4 /* AppDelegate.swift in Sources */,
 			);
