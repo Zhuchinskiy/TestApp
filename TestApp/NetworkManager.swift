@@ -30,9 +30,45 @@ class NetworkManager {
             case .failure(let error):
                 completionHandler(nil, error)
             }
-            
+        }
+
+    }
+    
+    func getTopAlbumsForArtist(_ name: String, _ completionHandler: @escaping (_ model: Albums?, _ error: Error?) -> Void) {
+        
+        let params = ["artist": name, "api_key": apiKey, "format": "json"]
+        let albumURL = baseURL.appending(RequestPath.topAlbum.stringValue)
+        
+        Alamofire.request(albumURL, method: .get, parameters: params).validate().responseJSON { (response) in
+        
+            switch response.result {
+            case .success:
+                let artistModel = Albums(object: response.data!)
+                completionHandler(artistModel, nil)
+            case .failure(let error):
+                completionHandler(nil, error)
+            }
         }
         
     }
     
+    func getDetailsForAlbum(_ album: String, artist: String, _ completionHandler: @escaping (_ model: AlbumDetails?, _ error: Error?) -> Void) {
+        
+        let params = ["artist": artist, "api_key": apiKey, "album": album ,"format": "json"]
+        let albumURL = baseURL.appending(RequestPath.AlbumDetails.stringValue)
+        
+        Alamofire.request(albumURL, method: .get, parameters: params).validate().responseJSON { (response) in
+            
+            switch response.result {
+            case .success:
+                let albumDetails = AlbumDetails(object: response.data!)
+                completionHandler(albumDetails, nil)
+            case .failure(let error):
+                completionHandler(nil, error)
+            }
+        }
+        
+        
+    }
+                        
 }
